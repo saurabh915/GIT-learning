@@ -1,7 +1,4 @@
-from io import SEEK_END
-
-
-line = open('SE.txt')
+line = open('strcom.py')
  
 no = line.read()
 print(len(no))
