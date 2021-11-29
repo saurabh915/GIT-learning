@@ -1,7 +1,4 @@
-line = open('SE.txt')
-
+line = open("SE.txt")
  
 no = line.read()
 print(no)
-  
-
