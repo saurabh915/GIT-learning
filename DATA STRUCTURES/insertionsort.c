@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    // star  with next number and compare with all previous numbers if previous number is greater replace it with his own location 
+    // start  with next number and compare with all previous numbers if previous number is greater replace it with his own location 
     //and compare itself with next previous number.
    // 
 //most important part here is shifting of elements.....follow code you will observe that  elements are shifting.
