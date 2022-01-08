@@ -1,6 +1,6 @@
 //this is best amoung all asorting techniques
 //this use partition technique
-//this algorithm sort elements smaller than pivote point to one side and greater elements to another side.
+
 #include <stdio.h>
 
 void printArray(int *A, int n)      // if we dont want to call array by refference we can also use syntax as ''''void printArray(int A[], int n)'''''

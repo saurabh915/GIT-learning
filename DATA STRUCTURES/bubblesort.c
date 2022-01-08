@@ -9,7 +9,7 @@ int main()
     int array[8] = {5, 4, 1, 9, 7, 3, 2, 6};
     for (int i = 0; i < 7; i++)
     {
-        for (int j = 0; j < 8 - i; j++)   //(8-i)this is only important part in which position of large number is decided.  and 8-i is used to does not include stored element again 
+        for (int j = 0; j < 8 - i; j++)   //this is only important part in which position of large number is decided.  and 8-i is used to does not include stored element again 
         {
             if (array[j] > array[j + 1])
             {
