@@ -10,3 +10,7 @@ for no in y:
    add = add + no
 print(add)    
     
+m = open('write.txt','w')  
+print(m)
+lin1 = "coding in python"
+m.write(lin1)
