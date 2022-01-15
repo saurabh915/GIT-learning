@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string functions</title>
+  </head>
+  <body>
+    <h1>this is heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+      quibusdam corporis unde animi ea aut iste cumque in reiciendis. Facere,
+      nemo iusto qui hic ipsam in, sequi saepe accusamus placeat ullam dolorem
+      nesciunt libero quae distinctio aliquid quidem est animi! Blanditiis
+      nesciunt distinctio est at?
+    </p>
+    <script>
+        var string = "saurabh is good  boy";
+        var index = string.indexOf('is')//index of first occuring is.
+        console.log(index);
+        var index = string.lastIndexOf('is')//index of last occuring is.
+        console.log(index);
+        var cut = string.substring(8, 16);//slice string from index 8 to 16 index but not including it.
+        console.log(cut);
+        cut = string.substr(8,8);//slice string sarting from index 8 to next 8 character.
+        console.log(cut);
+
+
+        var replaced = string.replace('good','bad');//replace some part of string with new string.
+        console.log(replaced);
+        console.log(string.toUpperCase());
+        console.log(replaced.toLowerCase());
+console.log(string+",aren't I ?")//concanate two strings.
+var trimmer = "       hello, how are       you     ?       ";
+console.log(trimmer.trim())//cut starting and ending whitespaces .  
+var char2 = string.charAt(5);
+console.log(char2);
+var char2 = string.charCodeAt(5);
+console.log(char2);
+
+    </script>
+  </body>
+</html>

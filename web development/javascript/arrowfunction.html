@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function </title>
+    <style>
+        #container{
+            border: 2px solid red ;
+            display: inline-block;
+            background-color: blue;
+            border-radius: 7px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        i am a container
+    </div>
+</body>
+<script>
+   /* function greet() {
+        let element = document.getElementsById('container');
+          element[0].innerHTML = 'good morning';
+          console.log(element);
+    }
+    greet();
+    let greet2 = ()=>{
+        let element = document.getElementsById('container');
+          element[0].innerHTML = 'good afternoon';
+          console.log(element);
+        
+    };*/ 
+    let element = document.getElementById('container');
+  setInterval(  greet3= () => {
+    if (element.innerHTML != 'good noon')
+    {
+        element.style.display = "inline-block";
+      
+          element.innerHTML = 'good noon';
+          console.log(element);
+          element.style.border = '2px solid red';
+    }
+    else
+    {
+     
+          element.innerHTML = '  ';
+          element.style.display = "none";
+          console.log(element);
+    }
+      
+  }, 700);
+     let object={
+         names: ["saurabh","Rohit","purohit","shreyas"],
+         speak() {
+            this.names.forEach(element => {
+                console.log("kookdo koo"+ element)
+            });
+            
+        }
+     }
+       
+    
+   
+   
+</script>
+</html>
