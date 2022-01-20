@@ -4,10 +4,10 @@ int main()
     int a;
     int array[50]= {1,12,14,18,66};
     printf("enter the number you want to find out:");
-scanf("%d",&a);
- int mid=5/2;
+    scanf("%d",&a);
+    int mid=5/2;
 
-  here:
+    here:
    if (array[mid]==a)
    {
      printf("your number is found at location %d",mid);

@@ -17,7 +17,7 @@ int main()
             {                                             //.
                                                          //.
                 min = j;                            //   assigned as "min"
-       
+                                                     // it is same as finding maximum number from array; 
                  }  
            
         }     // after comparing  all the  elements in array and confirming minimum element for position i it will swap with 
