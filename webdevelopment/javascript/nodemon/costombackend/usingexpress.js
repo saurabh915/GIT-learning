@@ -7,10 +7,10 @@ app.use("/costomstatic",express.static('costomstatic'));
 //set the tempplate engine as pug
 app.set('view engine','pug');
 //set the views directory
-app.set('costomviews',path.join(__dirname,'costomviews'));
+app.set('views',path.join(__dirname,'costomviews'));
 //our pug demo "end" point--->end point is point wherewe can joint tamplet.
-app.get("/demo",(req,res)=>{
-    res.status(200).render("costomdemo",{title:'hey harry', message:'thanks for teaching us how to use  pug'})
+app.get("/costomdemo",(req,res)=>{
+    res.status(200).render("costomdemo",{title:'hey harry', message:' teaching us how to use  pug'})
 });
 app.get('/', (req ,res)=>{
     res.status(200).send(`index.html`)
