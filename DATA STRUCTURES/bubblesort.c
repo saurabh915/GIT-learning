@@ -11,7 +11,7 @@ int main()
     {
         for (int j = 0; j < 8 - i; j++)   //this is only important part in which position of large number is decided.  and 8-i is used to does not include stored element again 
         {
-            if (array[j] > array[j + 1])
+            if (array[j] > array[j + 1])  // if condition takes place as false statement then element is leaved as it is and j is incremented and compared with next element.
             {
                 int temp = array[j];        //by this number swapping largest number is moved to its position.
                 array[j] = array[j + 1];

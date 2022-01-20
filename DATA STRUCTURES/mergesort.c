@@ -1,5 +1,10 @@
-
-
+/*the overall process here is first break down whole array into  peaces of two elements
+and then make one as low and one as high and one as mid  and start comparing low sided elements with mid+1 sided elements 
+ if first element of low sided element is smaller than first element which are on mid+1 side then move it on new array 
+ then as element of smaller side is added to new array only low side is incremented and again checked with first elements of 
+ mid+1 side when elements on low side found to be greater than element on low side then mid+1 sided element is stored in new array
+ and that sided element is compared with all low sided elements and if all elements of one side are stored on new array 
+ then remaing elements of remaining side are stored as they are and this process continued till top branch*/
 
 
 
@@ -12,13 +17,13 @@ void print(int array[], int n)
     }
     printf("\n");
 }
-void merge(int array[], int mid, int low, int high)
+void merge(int array[],int low, int mid,  int high)
 {
 
     int i, j, k, B[100];   // new array is given for storing the array elements orderly.(this is not needed for the quick sort because there is partitioner )
     i = low;
     j = mid + 1;
-    k = low;
+    k = low;                       // here k is kept as low as low may be zero or one or two also.....
 
     while (i <= mid && j <= high)    // here 'i' is for one for left part of array 'mid'  && 'j' is right part of array  'mid'
     {
@@ -50,7 +55,10 @@ void merge(int array[], int mid, int low, int high)
     }
     for (int i = low; i <= high; i++)
     {
-        array[i] = B[i];
+        array[i] = B[i];                /*here is magical part where array is moved to upper branch of tree structure
+                                              here whole array is not changed directly at first place it configure only 2
+                                                elements one peace this configured 2 elements  this two elements of one pease 
+                                                will act as a only one pease for upper branch*/
     }
 }
 

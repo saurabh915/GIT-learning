@@ -4,7 +4,8 @@ int main()
     // start  with next number and compare with all previous numbers if previous number is greater replace it with his own location 
     //and compare itself with next previous number.
    // 
-//most important part here is shifting of elements.....follow code you will observe that  elements are shifting.
+//most important part here is SHIFTING  of elements.....follow code you will observe that  elements are shifting.
+// IT WORKS ON ONLY ONE FOR LOOP
     int array[7] = {6, 3, 9, 10, 15, 1, 2};
    for (int i = 1; i < 7; i++)
    {
