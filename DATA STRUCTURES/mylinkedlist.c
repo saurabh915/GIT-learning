@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include<stdlib.h>
-struct node
+struct node                   /*defining structure for creating empty node (imagine it as empty  big box with
+                            small address box which stores name of   next big box )   and empty data box  */  
 {
     int data;
-    struct node *next;
+    struct node *next;//address box
 };
-struct node *head;
+struct node *head;//This head stores name of first  emty big box  
 void beginsert();
 void lastinsert();
 void randominsert();
@@ -36,35 +37,35 @@ int main()
         {
 
         case 1:
-            randominsert();
+            randominsert();//complete
             break;
         case 2:
-            beginsert();
+            beginsert();//complete
             break;
         case 3:
-             lastinsert();
+             lastinsert();//complete
             break;
 
         case 4:
-            length();
+            length();//complete
             break;
         case 5:
-            display();
+            display();//complete
             break;
         case 6:
-            random_delete();
+            random_delete();//complete
             break;
         case 7:
-            begin_delete();
+            begin_delete();//complete
             break;
         case 8:
-            last_delete();
+            last_delete();//complete
             break;
         case 9:
-            search();
+            search();//complete
             break;
         case 10:
-            exit(1);
+            exit(1);//complete
             break;
         }
     }
@@ -72,8 +73,8 @@ int main()
 }
 void randominsert()
 {
-
-    struct node *temp, *s,*n;
+//in random insert node is inserted after the given loc.
+    struct node *temp, *s,*n;//s pointeris used to itterate in list till  and n is used for swapping and temp is used to create node
     int item, loc;
     int i = 1;
     temp = (struct node *)malloc(sizeof(struct node *));
@@ -89,20 +90,19 @@ void randominsert()
         s = s->next;
         i++;
     }
-     n = s;
-    s = temp;
-    temp->next=n;
+    temp->next =s->next;
+    s->next =temp;
 }
 
 void beginsert()
 {
-    struct node *temp;
+    struct node *temp;//temp is empty big box   with NULL as name
     int item;
 
-    temp = (struct node *)malloc(sizeof(struct node *));
+    temp = (struct node *)malloc(sizeof(struct node *));//giving name to big box 
     printf("enter the data");
     scanf("%d", &item);
-    temp->data = item;
+    temp->data = item;// as name of big box  is temp by using  that name  
     temp->next = NULL;
     if (head == NULL)
     {
@@ -111,7 +111,7 @@ void beginsert()
     }
     else
     {
-        struct node *p;
+        struct node *p;//here p is just used as third variable for swapping 
         p = head;
         head =temp;
         temp->next = p;
@@ -122,12 +122,13 @@ void lastinsert()
 {
 
     int item;
-    struct node *ptr, *temp;
+    struct node *ptr, *temp;//here ptr is used for finding NULL in last NODE and temp is used to store data 
     temp = (struct node *)malloc(sizeof(struct node *));
     scanf("%d", &item);
-
+ 
     ptr = head;
-    while (ptr != NULL)
+   
+    while (ptr->next != NULL)
     {
         ptr = ptr->next;
        
@@ -157,7 +158,7 @@ void begin_delete()
    /*  temp=head;
     temp = temp ->next;*/
     temp = head->next;
-    head->next;
+    head=temp;
 }
 void last_delete()
 {
@@ -181,7 +182,7 @@ void random_delete()
 
     printf("enter the location\n ");
     scanf("%d", &loc);
-    temp->next = NULL;
+  
     s = head;
     while (i < loc-1)
     {
@@ -194,10 +195,10 @@ void random_delete()
 }
 void display()
 {
-    int i=1;
+    
     struct node *temp;
     temp = head;
-    while (i<length())
+    while (temp!=NULL)
     {
         
        
@@ -209,6 +210,7 @@ void search()
 {
     int item;
     struct node *temp;
+    temp = head;
     int count = 0;
     printf("enter the data you want to search:");
     scanf("%d", &item);

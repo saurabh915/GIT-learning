@@ -1,22 +1,16 @@
-doctype html
-html
-  head
-    style
+extends base.pug
+
+block scripts 
+  script(src='static/index.js')
+block style 
+     style
       include ../static/style.css
-  body
-    nav#navbar 
-       ul  
-          div#logo
-            img(src="/static/IMG/dancelogo.png")
-          li #[a(href='/') HOME ]
-          li #[a(href='/') ABOUT]
-          li #[a(href='/') SERVICES]
-          li #[a(href='/') CLASS INFO]
-          li #[a(href='/') CONTACT US ]
-    section#introsection 
+block content 
+     
+      section#introsection 
         div WELCOME TO PATIL'S DANCE ACADEMY 
         div DANCE LIKE NO ONE IS WATCHING 
-    section#missionsection 
+      section#missionsection 
         div OUR MISSION    
         div.card
                 h3  PERFECTION
@@ -40,21 +34,11 @@ html
                        img(src='/static/IMG/dancelogo.png')
                    div.card-content
                       p | THIS IS CONTENT        
-    section#sponsorsection   
+      section#sponsorsection   
         h3|our sponsors 
         div#sponsors
            img(src="/static/IMG/microsoft logo.png", alt="image", class="spimage") 
            img(src="/static/IMG/hp logo.png", alt="image", class="spimage") 
            img(src="/static/IMG/skype logo.png", alt="image", class="spimage")
            img(src="/static/IMG/tata logo.png", alt="image", class="spimage") 
-
-    footer#footer 
-        |copyright2022 @ patil'sGym.com All rights reserved              
-    
-    
-    
-    
-    
-    script
-      include ../static/index.js
-      
+        
