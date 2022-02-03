@@ -2,11 +2,28 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const app = express();
+const bodyparser = require('body-parser');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/saurabhkart', {useNewUrlParser: true});
 const port = 8000;
+
+
+//DEFINING MONGOOSE SCHEMA
+var contactSchema = new mongoose.Schema({
+    name: String,     //defining schema as present in form
+    phone:String,
+    email:String,
+    address:String,
+    desc:String
+}) ;
+
+var Contact = mongoose.model('Contact',contactSchema);//defining collection as Contacts
+
+ 
 
 // EXPRESS STUFF
 app.use("/static",express.static('static'));//for serveying static files
-app.use(express.urlencoded());
+app.use(express.urlencoded());//it is used for parsing post request
 // PUG STUFF
 app.set('views',path.join(__dirname,'views'));//set the views directory
 app.set('view engine','pug');//set the tempplate engine as pug
@@ -19,10 +36,10 @@ app.get('/', (req ,res)=>{
 });
 app.get('/contact', (req ,res)=>{
 
-    res.status(200).render("contact");
+    res.status(200).render("contact");// here contact is contact.js file 
 });
 
-//collecting from user
+//collecting from user into output2.txt
 app.post('/contact',(req,res)=>{
     name = req.body.name      //second name is taken from name tag from form  
     // age = req.body.age
@@ -36,6 +53,17 @@ fs.writeFileSync('output2.txt',outputwrite)
     res.status(200).render("home",parms);
 })
 
+//collecting data into database mongodb
+app.post('/contact',(req ,res)=>{
+    var myData= new Contact(req.body);//all body elements like name address email from contact page are collected in contact collection of database and in mydata variable
+    myData.save().then(()=>{
+        res.send("this item is saved into the database")
+    })
+res.status(400).send("item was not send to database")
+
+});
+
+res.status(200).render("contact");
 
 
 //LISTENING TO SERVER
