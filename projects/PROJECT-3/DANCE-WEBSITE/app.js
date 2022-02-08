@@ -50,7 +50,7 @@ app.post('/contact',(req,res)=>{
 fs.writeFileSync('output2.txt',outputwrite)
 
     const parms ={"message":"your form has been submitted successfully"};
-    res.status(200).render("home",parms);
+    res.status(200).render("contact",parms);
 })
 
 //collecting data into database mongodb
@@ -63,7 +63,7 @@ res.status(400).send("item was not send to database")
 
 });
 
-res.status(200).render("contact");
+ //res.status(200).render("contact");
 
 
 //LISTENING TO SERVER

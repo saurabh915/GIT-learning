@@ -23,7 +23,7 @@ int main()
     {
     case 1:
         num1 = a & b;
-       int binary= showbit(5);
+       int binary= showbit(num1);
        printf("%d",binary);
         break;
     case 2:

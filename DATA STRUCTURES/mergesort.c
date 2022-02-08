@@ -60,19 +60,27 @@ void merge(int array[],int low, int mid,  int high)
                                                 elements one peace this configured 2 elements  this two elements of one pease 
                                                 will act as a only one pease for upper branch*/
     }
+    printf("%d %d %d\n",array[low] ,array[mid], array[high] );
+    print(array,5);
 }
 
 void mergesort(int array[], int low, int high)
 {
+            
+
     if (low < high)
     {
 
         int mid;
         mid = (low + high) / 2;
+        printf("during calling to mergesort1 %d %d %d\n",array[low] , array[mid], array[high] );
 
-        mergesort(array, low, mid);       // this is most cruisial point of this program where 
-                                           // all the aray is divided into a branch  type structure.
+        mergesort(array, low, mid);                // this is most cruisial point of this program where 
+        printf("during calling to mergesort2 %d %d \n",array[mid+1] ,  array[high] );
+                                                     // all the aray is divided into a branch  type structure.
         mergesort(array, mid + 1, high);
+                printf("during calling to merge %d %d %d \n",array[low] ,array[mid] ,  array[high] );
+
         merge(array, low, mid, high);   //---->  after this the last branch is merged and continued upto root of this branches
     }
 }
