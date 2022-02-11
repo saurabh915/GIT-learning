@@ -1,5 +1,8 @@
 //first in first out principle
-
+/*In queue first emptyarray is created and then rear and front are set to -1
+ after if we want to insert then rear is incremented and if we want to delete then front is incremented
+ therefore the element which is inserted first will be deleted first and for traversing it will start from
+ front upto rear   */ 
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 5

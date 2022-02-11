@@ -8,7 +8,7 @@ let port =80;
 app.use("/costomstatic",express.static('costomstatic'));//for serveying static files
 app.use(express.urlencoded());
 // PUG STUFF
-app.set('costomviews',path.join(__dirname,'costomviews'));//set the views directory
+app.set('costomviews',path.join(__dirname,'views'));//set the views directory
 app.set('view engine','pug');//set the tempplate engine as pug
 
 

@@ -14,7 +14,7 @@
     
 </body>
 <script>
-    let lists = ["saurabh","Rohan","Rohit","Hritick","dfdf","dfdfdf","sdfdfdf"];
+    let lists = ["saurabh","Rohan","Rohit","Hritick","dfdf","dfdfdf","sdfdfdf"];//this is array
 /*    for (const key in lists) {
         if (lists.hasOwnProperty.call(lists, key)) {
             let element = lists[key];
@@ -23,13 +23,13 @@
         }
     }*/ 
   /* lists.forEach(element => {
-       console.log("hello",element);
+       console.log("hello",element);//traversing for each element in list
    });*/ 
    lists.forEach(function f(element)  {
     console.log("hello from for each loop",element);
    });
 for (const key in lists) {
-    if (lists.hasOwnProperty.call(lists, key)) {
+    if (lists.hasOwnProperty.call(lists, key)) {//this is for in loop it is used to for traversing object in javascript
         const element = lists[key];
         console.log("hello from for in loop",element);
     }

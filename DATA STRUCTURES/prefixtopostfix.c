@@ -10,7 +10,7 @@ int main(void)
     char postFixExpr[256] = ""; // Statements
     printf("Begin prefix to postfix conversion\n\n");
     preToPostFix(preFixExpr, postFixExpr);
-    printf("Prefix expr:  %-1s\n", preFixExpr);
+    printf("Prefix expr:  %-s\n", preFixExpr);
     printf("Postfix expr: %-s\n", postFixExpr);
     printf("\nEnd prefix to postfix conversion\n");
     return 0;
@@ -22,7 +22,8 @@ void preToPostFix(char *preFixIn, char *postFix)
     char postFix2[256];
     char temp[256];
     int lenPreFix; // Statements
-    if (strlen(preFixIn) == 1)
+    if (strlen(preFixIn) == 1)//if the length of prefix expression is 1 then copy the prefix expression as it is in postfix expression
+     
     {
         *postFix = *preFixIn;
         *(postFix + 1) = '\0';

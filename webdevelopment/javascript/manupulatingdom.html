@@ -30,10 +30,12 @@
 <script>
 let containers = document.getElementsByClassName('container');
     console.log(containers);
-let containers2 = document.querySelector('#nav>li');
+let nav = document.getElementById('nav')    ;
+nav.innerHTML ='<li>saurabh</li>';//for changing dom from html
+let containers2 = document.querySelector('#nav>li');//returning css selector like li , ul forms, button...
 console.log('selector returned is',containers2);
 let containers3 = document.querySelectorAll('#nav>li');
 console.log('selector returned is',containers3);
-containers3[0].innerHTML = "HOME";
+ containers3[1].innerHTML = "HOME";
 </script>
 </html>

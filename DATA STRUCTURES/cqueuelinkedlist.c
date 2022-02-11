@@ -6,8 +6,7 @@ struct node                   /*defining structure for creating empty node (imag
     int data;
     struct node *next;//address box
 };
-struct node *head;//This head will store address of first  emty big box but now it is pointing towards NULL;  
-
+struct node *head;//This head stores name of first  emty big box  
 void beginsert();
 void lastinsert();
 void randominsert();
@@ -84,12 +83,23 @@ void randominsert()
     temp->data = item;
     printf("enter the location\n ");
     scanf("%d", &loc);
-   
+    int len=length();
+     printf("length is %d\n",len);
+   if (loc>length())
+   {
+       printf("location exceeded\n");
+       printf("please reenter location");
+       randominsert();
+   }
     s = head;
     while (i < loc)
     {
         s = s->next;
         i++;
+    }
+       if (s == NULL)
+    {
+        beginsert();
     }
     temp->next =s->next;
     s->next =temp;
@@ -97,10 +107,11 @@ void randominsert()
 
 void beginsert()
 {
+    printf("begin insert is called\n");
     struct node *temp;//temp is empty big box   with NULL as name
     int item;
 
-    temp = (struct node *)malloc(sizeof(struct node *));//pointing to big box which do not have name by storing address of that newly created box
+    temp = (struct node *)malloc(sizeof(struct node *));//giving name to big box 
     printf("enter the data");
     scanf("%d", &item);
     temp->data = item;// as name of big box  is temp by using  that name  
@@ -112,7 +123,7 @@ void beginsert()
     }
     else
     {
-        struct node *p;//here p is just used as third variable for swapping p is able to store address of structure. 
+        struct node *p;//here p is just used as third variable for swapping 
         p = head;
         head =temp;
         temp->next = p;
@@ -142,7 +153,7 @@ void lastinsert()
 
 int length()
 {
-    int count = 1;
+    int count = 0;
     struct node *temp;
     temp = head;
     while (temp != NULL)
