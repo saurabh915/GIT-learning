@@ -1,12 +1,12 @@
-const http = require('http');
+const http = require("http");
 
-const hostname = '127.0.0.1';
+const hostname = "127.0.0.1";
 const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/HTML');
- // res.end('Hello World');
+  res.setHeader("Content-Type", "text/HTML");
+  // res.end('Hello World');
   res.end(`<!DOCTYPE html>
   <html lang="en">
   
@@ -139,6 +139,6 @@ const server = http.createServer((req, res) => {
   </html>`);
 });
 
-server.listen(80, '127.0.0.1', () => {
+server.listen(80, "127.0.0.1", () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });

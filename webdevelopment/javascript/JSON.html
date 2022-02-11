@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>converting object to json onject</h1>
+        <h1>converting object to json object</h1>
     </div>
 </body>
 <script>
@@ -17,10 +17,11 @@
         std: 14,
         college: "D. Y. PATIL"
     };
-    jsonstring = JSON.stringify(jsonobj);
+    console.log(jsonobj);
+    jsonstring = JSON.stringify(jsonobj);//we can use javascript object in stringify to convert object into json string
     console.log(jsonstring);
     jsonstring=jsonstring.replace("saurabh","rohit");
-    JSON.parse(jsonstring);
+    JSON.parse(jsonstring);//json string into json object
     console.log(jsonstring);
 </script>
 </html>
