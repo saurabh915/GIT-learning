@@ -17,7 +17,7 @@ var contactSchema = new mongoose.Schema({
     desc:String
 }) ;
 
-var Contact = mongoose.model('Contact',contactSchema);//defining collection as Contacts
+var Contact = mongoose.model('Contact',contactSchema);//defining collection as Contacts here the table which will be created will be named as contacts
 
  
 
@@ -25,7 +25,7 @@ var Contact = mongoose.model('Contact',contactSchema);//defining collection as C
 app.use("/static",express.static('static'));//for serveying static files
 app.use(express.urlencoded());//it is used for parsing post request
 // PUG STUFF
-app.set('views',path.join(__dirname,'views'));//set the views directory
+app.set('views',path.join(__dirname,'views'));//set the views directory in which pug related stuff is present
 app.set('view engine','pug');//set the tempplate engine as pug
 
 
@@ -41,13 +41,13 @@ app.get('/contact', (req ,res)=>{
 
 //collecting from user into output2.txt
 app.post('/contact',(req,res)=>{
-    name = req.body.name      //second name is taken from name tag from form  
+    user = req.body.name      //second name is taken from name tag from form  
     // age = req.body.age
     // gender= req.body.gender
     address = req.body.address
     // more = req.body.more
-    let outputwrite =`name of the client is ${name},residing at ${address}.`
-fs.writeFileSync('output2.txt',outputwrite)
+    let outputwrite =`name of the client is ${user},residing at ${address}.`
+fs.writeFileSync('outputSS.txt',outputwrite)
 
     const parms ={"message":"your form has been submitted successfully"};
     res.status(200).render("contact",parms);
