@@ -165,14 +165,55 @@ void insert(struct node* root, int key)
         else
         {
             prev->right=new;
+          
 
         }
         
         
     }
+    struct node* inorderpredecessor(struct node* root){
+        root = root->left;
+        while (root->right!=NULL)
+        {
+           root=root->right;//here is the trick which says that if we do inorder traverser and we got all elements sorted and we have to find 
+                             // the node which is just behind the any node(let say A) then that precceding node is right most node of  left subtree of   node (A).  
+        }
+        return root;
+    }
+    
+struct node *deletenode(struct node* root, int value)
+{
+    struct node* ipre; 
+    if(root == NULL )
+    {
+        return NULL;
+    }
+    if (root->left==NULL && root->right==NULL)
+    {
+        free(root);
+        return NULL;
+    }
+    
+    //search the node to be deleted
+    if (value<root->data)
+    {
+         root->left = deletenode(root->left,value);
+    }
+    else if(value>root->data)
+        {
+            root->right = deletenode(root->right,value);    
+      }
+      //deletion strategy the node is found
+    else
+    {
+        ipre = inorderpredecessor(root);
+        root->data = ipre->data;//here the core operation of deletion is takes place.
+       root->left = deletenode(root->left,ipre->data);
+    }
     
     
-
+    return root;
+}
 
 int main()
 {
@@ -202,21 +243,25 @@ p1->left = p2;
 p1 -> right =p3; //assigning position to nodes of tree
 p4->left =p5;
 p4->right = p6;
-printf("preorder traverser: ");
-preordertraverse(p);
-printf("postorder traverser: ");
-printf("inorder traverser:  ");
 inorder(p);
-// postoreder(p);
-printf("is bst: %d\n",isBST(p));
+deletenode(p,3);
+printf("\n");
+inorder(p);
+// printf("preorder traverser: ");
+// preordertraverse(p);
+// printf("postorder traverser: ");
+// printf("inorder traverser:  ");
+// inorder(p);
+// // postoreder(p);
+// printf("is bst: %d\n",isBST(p));
 
 
-struct node* value =search(p , 2);
-printf("%d\n",value->data);
-struct node* n = searchitr(p,3);
-printf("found: %d",n->data);
+// struct node* value =search(p , 2);
+// printf("%d\n",value->data);
+// struct node* n = searchitr(p,3);
+// printf("found: %d",n->data);
 
-insert(p  , 9);
-printf("\n%d",p->right->right->right->data );
+// insert(p  , 9);
+// printf("\n%d",p->right->right->right->data );
     return 0;
 }
