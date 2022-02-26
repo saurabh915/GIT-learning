@@ -1,2 +1,0 @@
-webdevelopment/javascript/node_modules
-projects/PROJECT-2/node_modules

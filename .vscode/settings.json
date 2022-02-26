@@ -1,2 +1,8 @@
 {
+    "C_Cpp.errorSquiggles": "Enabled",
+    "files.associations": {
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "AVL_TREE2.C": "cpp"
+    }
 }

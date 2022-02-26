@@ -1,6 +1,6 @@
 //this is best amoung all asorting techniques
 //this use partition technique
-
+//this algorithm sort elements smaller than pivote point to one side and greater elements to another side.
 #include <stdio.h>
 
 void printArray(int *A, int n)      // if we dont want to call array by refference we can also use syntax as ''''void printArray(int A[], int n)'''''
@@ -30,7 +30,7 @@ int partition(int A[], int low, int high)
 
         while (A[j] > pivot)
         {
-            j--;             //'j' is finding an element which is 'less' than pivot point hence it is incrementing if te element 
+            j--;             //'j' is finding an element which is 'less' than pivot point hence it is decrementing if te element 
                                  //  founded element is not lesser.other wise as fouded element is less than pivot it is moving 
                             // that element to left of the array.
         }
