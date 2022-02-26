@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrow function</title>
+    <style>
+      #container {
+        border: 2px solid red;
+        display: inline-block;
+        background-color: blue;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">i am a container</div>
+  </body>
+  <script>
+    /* function greet() {
+        let element = document.getElementsById('container');
+          element[0].innerHTML = 'good morning';
+          console.log(element);
+    }
+    greet();//calling greet function using simple function
+    let greet2 = ()=>{
+        let element = document.getElementsById('container');
+          element[0].innerHTML = 'good afternoon';
+          console.log(element);
+        
+    };*/
+    setTimeout(() => {
+        console.log("inside set time out");
+    }, 5000);//this function will be inwoaked after 5000 microseconds..
+  
+    let element = document.getElementById("container"); //select element by id from any html document
+    setInterval(
+      (greet3 = () => {
+        //here setinterval is a function and greet3 is userdefined function
+        if (element.innerHTML != "good noon") {
+          element.style.display = "inline-block"; //for giving styling to that element
+
+          element.innerHTML = "good noon";
+          //   console.log(element);
+          element.style.border = "2px solid red";
+        } else {
+          element.innerHTML = "  ";
+          element.style.display = "none";
+          //   console.log(element);
+        }
+      }),
+      700
+    ); //giving speed to function after hoe much time this function should be called
+    let object = {
+                        names: ["saurabh", "Rohit", "purohit", "shreyas"], //name is array
+                         speak() {
+                                     this.names.forEach((element) => {
+                                                                              //wecan use "this" efficiently by using arrow function
+                                                                              console.log("kookdo koo" + element);
+                                                                      });
+                                 },
+                  };
+                  object.speak();
+  </script>
+</html>
