@@ -1,3 +1,5 @@
+
+//here y is not function of x or y but it can acess the private variables of classx and classy
 #include<iostream>
 using namespace std;
 class Y;
@@ -8,7 +10,7 @@ class X
     void setvalue(int value){
      data =value;
     }
-     friend void  add(X, Y);
+     friend void  add(X, Y);//synatax of friend function
 };
 class Y
 {

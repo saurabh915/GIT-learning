@@ -1,3 +1,5 @@
+//taking addresses of objects and creating a function which is not related to any class but can access members of class by friend function. 
+
 #include<iostream>
 using namespace std;
 class c2;
@@ -32,7 +34,7 @@ class c2
     }
  
 };
-void exchange(c1 &m,c2 &n)
+void exchange(c1 &m,c2 &n)//taking addresses of objects like a and b 
 {
     int tmp = m.val;
     m.val = n.val2;

@@ -11,7 +11,7 @@ class employee
         id = inpid;
         salary = 34.0;
     }
-   employee(){}
+   employee(){}//defult constructor
 };
 
 //derived class syntax
@@ -19,7 +19,7 @@ class employee
 // {
 //     class members/methods/etc
 // }
-// 1.  default vidibility mode is private
+// 1.  default visibility mode is private
 // 2.   visibility mode public ===public members of base class will become public members of derived class
 // 3.  private visibility mode === public members of base class will become private of derived class
 // 4. private members do not inherited
@@ -45,7 +45,7 @@ int main()
     cout<<saurabh.salary<<endl;
     cout<<rohit.salary;
     programmer skillf(1);
-    cout<<skillf.languagecode;
+    cout<<skillf.languagecode;//accessing data from languagecode variable
     skillf.getdata();
    cout<< skillf.id;
 }

@@ -1,3 +1,5 @@
+//here two base classes derive one class
+
 #include<iostream>
 using namespace std;
 class base1

@@ -1,6 +1,6 @@
 const http = require('http')
 const fs = require('fs')
-const filecontent = fs.readFileSync('stringfunctions.html');
+const filecontent = fs.readFileSync('stingfunctions.html');
 
 const server = http.createServer((req,res)=>{
     res.writeHead(200,{'Content-type':'text/html'});

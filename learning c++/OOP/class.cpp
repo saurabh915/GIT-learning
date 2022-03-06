@@ -20,7 +20,7 @@ int main()
 {
     B b;
     int* p;
-    p =&b.z;
+    p =&b.z;//p is pointing to object
     *p =1;
     p--;
     *p = 2;
