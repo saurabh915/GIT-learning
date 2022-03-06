@@ -1,3 +1,6 @@
+
+//int this constructor there are different data types in place of parameters but there are more number of constructoers 
+//so it important to choose which constructor 
 #include<iostream>
 using namespace std;
 class bankdeposite

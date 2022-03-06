@@ -1,3 +1,5 @@
+//constructors with parameters and constructors are data type less they do not return any value
+
 #include<iostream>
 using namespace std;
 class complex 

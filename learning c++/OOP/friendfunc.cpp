@@ -1,7 +1,8 @@
 #include <iostream>
 // accesing private members of class by function in another class
 using namespace std;
-
+//sumrealcomplex is a function of calculator class which takes objects 
+// of complex class 
 
 
 

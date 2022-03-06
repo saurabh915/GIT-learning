@@ -114,7 +114,7 @@ void beginsert()
     {
         struct node *p;//here p is just used as third variable for swapping p is able to store address of structure. 
         p = head;
-        head =temp;
+        head =temp;//we can only copy values of head or change values of head
         temp->next = p;
     }
 }
@@ -142,10 +142,10 @@ void lastinsert()
 
 int length()
 {
-    int count = 1;
+    int count = 0;
     struct node *temp;
     temp = head;
-    while (temp != NULL)
+    while (temp->next != NULL)
     {
         temp = temp->next;
         count++;
@@ -159,7 +159,7 @@ void begin_delete()
    /*  temp=head;
     temp = temp ->next;*/
     temp = head->next;
-    head=temp;
+    head=temp;//we can only change head value
 }
 void last_delete()
 {

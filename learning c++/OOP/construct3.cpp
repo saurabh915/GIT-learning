@@ -6,7 +6,7 @@ class point
     int a,b;
     public:
  
-    friend void difference(point , point );
+    friend void difference(point , point );//here declaration of friend takes place
     point(int x, int y) 
     {
         a=x;
@@ -16,7 +16,7 @@ class point
     }
    
 };
- void difference(point o1,point o2)
+ void difference(point o1,point o2)//this function is not part of point class at all
     {
         int xdiff = o1.a -o2.a;
         int ydiff= o1.b-o2.b;
@@ -26,7 +26,7 @@ class point
  
 int main()
 {
-point c(5,7),d(4,7);
+point c(5,7),d(4,7);//construtors are called 
 
  difference(c,d);
 }

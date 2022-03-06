@@ -4,7 +4,7 @@ class complex
 {
  int a,b;
  public:
- complex(int x, int y=10)
+ complex(int x, int y=10)//default value of y is taken ass 10;
  {
      a=x;
      b =y;

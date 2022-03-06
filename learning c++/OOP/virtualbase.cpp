@@ -1,3 +1,5 @@
+//virtual declaration is for remove ambiguity 
+//here inheritance is done in the form like A derived B and C and these B and c derived D 
 #include<iostream>
 using namespace std;
 class student
@@ -14,7 +16,7 @@ class student
      cout<<"your roll no is "<<roll_no<<endl;
  }
 };
-class test:virtual public student{
+class test:virtual public student{//here test is virtual derived class of student
     protected:
     float maths, physics;
     public:
@@ -30,7 +32,7 @@ class test:virtual public student{
         <<"physics:"<<physics<<endl;
     }
 };
-class sports:virtual public student{
+class sports:virtual public student{//sports is derived from students virtually 
     protected:
     float score;
     public:
@@ -47,13 +49,13 @@ class sports:virtual public student{
    
 
 };
- class result : public test, public sports{
+ class result : public test, public sports{//here result is derived from two already derived classes (A,B) and this A,B is derived from base class let say c 
         private:
         float total;
         public:
         void display()
         {
-            total = maths + physics+score;
+            total = maths + physics+score;//this maths and physics is derived from test and score is derived from sports
             print_number();
             print_marks();
             print_score();

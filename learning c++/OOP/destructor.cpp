@@ -25,7 +25,8 @@ int main()
         num n2,n3;
         cout <<"exiting this block";
     
-    }//after exiting this curly brakets the destructor is called
+    }//after exiting this curly brakets the destructor is called 
+    //destructor is called when there is no use of object after that
     cout<<"back to main"<<endl;
 
 

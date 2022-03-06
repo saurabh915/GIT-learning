@@ -10,7 +10,7 @@ class base1
     public:
     void greet()
     {
-        cout<<"how are you??";
+        cout<<"how are you?? from base1";
     }
  
 };
@@ -19,7 +19,7 @@ class base2
  public:
  void greet()
  {
-     cout<<"kasa hais ?? "<<endl;
+     cout<<"kasa hais ?? from base2 "<<endl;
  }
 };
 class derived : public base1,base2{
@@ -27,7 +27,7 @@ class derived : public base1,base2{
     public:
     void greet(){
         base1::greet();//whenever greet is called for greet method now greet will be called from base1 class;
-
+                       //because of 'base1::'greet();
     }
 };
 int main()
@@ -35,6 +35,7 @@ int main()
     base1 base1obj;
     base2 base2obj;
     base1obj.greet();
+    base2obj.greet();
     derived obj;
     obj.greet();
 
