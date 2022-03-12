@@ -1,3 +1,8 @@
+//in this problem we have given an 2d array and we have to add the numbers representing every possible hour glass and hour glass is 
+//  1  2  2
+//  *  3  *
+//  3  4  6
+// and then find biggest amoung them 
 #include <stdio.h>
 int main()
 {

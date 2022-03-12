@@ -4,7 +4,9 @@
   "description": "trying to update project 2 food website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev":   "nodemon app.js"
   },
   "author": "saurabh",
   "license": "ISC",

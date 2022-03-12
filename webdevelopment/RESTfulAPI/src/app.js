@@ -1,45 +1,55 @@
+
+
+//npm init for creating package.json
+// npm init ~y for creating package.json automatically
 const express =  require("express");
+const { send } = require("express/lib/response");
+const res = require("express/lib/response");
+const studentrouter = require("./routers/student");
 const app =express();
 const port = process.env.PORT ||3000;//if you do not include any port number then it will automatically assign any port number
 
 app.use(express.json())//now our user veriable can access req.body method in json and can use it
-
+app.use(studentrouter);//registering router
 //to add all external folder 
 require("./db/conn");
-const Student = require("./modals/students")
+// const Student = require("./modals/students")
+
+
+
+
 
 app.get("/",(req,res)=>{
     res.send("hello, champion");
 });
 
 
-//create new students
-// app.post("/students",(req, res)=>{
-//     console.log(req.body);
-//     const user = new Student(req.body);//now data of studunt schema is stored in user in json format as we used app.use(express.json())  
-//     //above code is getting json data in user variable
-//     user.save().then(()=>{
-//         res.status(201).send(user);
-//     }).catch((e)=>{
-//         res.status(400).send("item not saved to database"+ e);
-//     })
-    
-//     // res.send("hello form the other side");
-// });
 
-//we can use any one above or below
-app.post("/students",async(req,res)=>{
-    try {
-        const user = new Student(req.body);
-        const createuser = await user.save();
-        res.status(201).send(createuser);
-        
-    } catch (error) {
-        res.status(400).send("item not saved to database"+ error);
-        
-    }
-   
-})
+
+
+// //creating new router
+
+// const router = new express.Router();
+
+// //Defining router
+// router.get("/patil",(req,res)=>{
+//          res.send("hello, whatsup guys")
+// });
+// //register router
+
+// app.use(router);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 app.listen(port,()=>{

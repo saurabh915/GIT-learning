@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const validator  =require("validator");
 const studentSchema = new mongoose.Schema({
-    name:{
+    name:{                 //this name word is  to find perticular person name 
         type:String,
         required: true,
         minlength: 3
