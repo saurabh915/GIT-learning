@@ -17,12 +17,12 @@ template <class T>
 int main()
 {
     vector<int> vec1;//here is declaration of vector  and v1 is like object
-    vector<char> vec2(6);//anther way to create a vector of leght 4
-    vec2.push_back('5');
-    vec2.push_back('7');//this will be added in vector after 5
-     vec2.push_back('9');//this will be added in vector after 7
+    // vector<char> vec2(6);//anther way to create a vector of leght 4
+    // vec2.push_back('5');
+    // vec2.push_back('7');//this will be added in vector after 5
+    //  vec2.push_back('9');//this will be added in vector after 7
 
-    display(vec2);
+    // display(vec2);
     
     
 //     vector <int> vec4(6,0);//adds 0 six times
@@ -37,15 +37,17 @@ int main()
     
     
     int element,size;
-    // cout<<"enter the size of a vector"<<endl;
-    // cin>>size;  
-    // for(int i =0; i<size;i++)
-    // {
-    //     cout<<"enter the element to add to this vector";
-    //     cin>>element;
-    //     vec1.push_back(element);
-    // }
-    // vec1.pop_back();//to remove last element
+    cout<<"enter the size of a vector"<<endl;
+    cin>>size;  
+    for(int i =0; i<10;i++)
+    {
+        cout<<"enter the element to add to this vector";
+        cin>>element;
+        vec1.push_back(element);
+    }
+     display(vec1);
+    vec1.erase(vec1.begin());//to remove last element
+    display(vec1);
     
     
     
