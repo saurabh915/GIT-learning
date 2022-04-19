@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'/* shortcut ---impt  */
-
+import { Link } from 'react-router-dom';
 export default function Navbar(props) {// rfc
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
@@ -12,7 +12,8 @@ export default function Navbar(props) {// rfc
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Home</a>
+          {/* change a to Link and href to "to" below */}
+          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,7 +27,7 @@ export default function Navbar(props) {// rfc
           </ul>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/">{props.aboutTextUtils}</a>       
+          <Link className="nav-link" to="/about">{props.aboutTextUtils}</Link>       
             {/* here we define which are the navbar are you want access in app.js for that we have to write props.variable_name by which you can change the content of that veriable and that changes will be reflect in same place of navbar  */}
         </li>
         <li className="nav-item">
@@ -42,7 +43,7 @@ export default function Navbar(props) {// rfc
       </ul>
 
     {/* switch */}
-      <div className={`form-check form-switch text-${props.mode==="light"?"dark":"light"}`}>
+      <div className={`form-check form-switch text-${props.mode==="white"?"#031518":"white"}`}>
   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault "onClick={props.togglemode}/>
   <label className="form-check-label" htmlFor="flexSwitchCheck">Default switch checkbox input</label>
 </div>
