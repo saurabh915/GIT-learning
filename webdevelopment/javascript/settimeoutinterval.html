@@ -36,11 +36,11 @@ let timeout =  setTimeout(greet,2000);
 clearTimeout(timeout);
 setInterval(greet,2000);*/ 
 function displaytime() {
-     time = new Date();           //<-------------------------------------------------------------     
-    console.log(time);                               //here the innerHTML = time here time means |
+     time = new Date();
+    console.log(time);
     document.getElementById('time').innerHTML= time;//this is how we can use javascript for creating website
 let hour = time.getHours();
-document.getElementById('hour').innerHTML=hour;//inner.HTML can be variable
+document.getElementById('hour').innerHTML=hour;
 let minutes = time.getMinutes();
 document.getElementById('minutes').innerHTML=minutes;
 let seconds = time.getSeconds();
