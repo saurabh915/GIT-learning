@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 //virtual declaration is for remove ambiguity 
 //here inheritance is done in the form like A derived B and C and these B and c derived D 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 #include<iostream>
 using namespace std;
 class student
@@ -16,7 +19,11 @@ class student
      cout<<"your roll no is "<<roll_no<<endl;
  }
 };
+<<<<<<< HEAD
+class test:virtual public student{
+=======
 class test:virtual public student{//here test is virtual derived class of student
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
     protected:
     float maths, physics;
     public:
@@ -32,7 +39,11 @@ class test:virtual public student{//here test is virtual derived class of studen
         <<"physics:"<<physics<<endl;
     }
 };
+<<<<<<< HEAD
+class sports:virtual public student{
+=======
 class sports:virtual public student{//sports is derived from students virtually 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
     protected:
     float score;
     public:
@@ -49,13 +60,21 @@ class sports:virtual public student{//sports is derived from students virtually
    
 
 };
+<<<<<<< HEAD
+ class result : public test, public sports{
+=======
  class result : public test, public sports{//here result is derived from two already derived classes (A,B) and this A,B is derived from base class let say c 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
         private:
         float total;
         public:
         void display()
         {
+<<<<<<< HEAD
+            total = maths + physics+score;
+=======
             total = maths + physics+score;//this maths and physics is derived from test and score is derived from sports
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
             print_number();
             print_marks();
             print_score();

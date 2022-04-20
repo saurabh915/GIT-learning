@@ -46,7 +46,6 @@ void inorder(struct node *root)
         printf("%d ",root->data);
         inorder(root->right);//first leftsubtree then root then right subtree; 
     }
-
 }
 int isBST(struct node* root)
 {
@@ -98,8 +97,13 @@ struct node* search(struct node* root , int key)
         }
         else
         {
-            if (root ->data>key)
+            if (root ->data->key)
             {
+                root = root->left;
+            }
+            else
+            {
+                root=root->right;
                 return search(root->left,key) ;
             }
             else

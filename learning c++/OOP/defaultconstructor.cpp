@@ -4,7 +4,11 @@ class complex
 {
  int a,b;
  public:
+<<<<<<< HEAD
+ complex(int x, int y=10)
+=======
  complex(int x, int y=10)//default value of y is taken ass 10;
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
  {
      a=x;
      b =y;

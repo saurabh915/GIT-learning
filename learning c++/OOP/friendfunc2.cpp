@@ -2,7 +2,11 @@
 
 using namespace std;
 class complex;
+<<<<<<< HEAD
+complex sumcomplex(complex o1,complex o2)//this is complex data type as it is returning object';
+=======
 complex sumcomplex(complex o1,complex o2)//this is complex data type as it is returning object of class complex';
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 {
     complex o3;
     o3.setNumber((o1.a +o2.a),(o1.b+o2.b));

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 //here two base classes derive one class
 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 #include<iostream>
 using namespace std;
 class base1

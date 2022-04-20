@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 //constructors with parameters and constructors are data type less they do not return any value
 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 #include<iostream>
 using namespace std;
 class complex 

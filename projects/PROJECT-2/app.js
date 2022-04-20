@@ -5,6 +5,18 @@ const app =express();
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 var cons = require('consolidate');
+<<<<<<< HEAD
+let port =8000;
+const url = "mongodb://localhost/contactdance";//this contactdance is database name 
+mongoose.connect(url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+const con = mongoose.connection;
+con.on("open",()=>{
+    console.log("database connected");
+});
+=======
 const { dirname } = require("path");
 const router = new express.Router();
 app.use(router);
@@ -28,6 +40,7 @@ mongoose.connect(url, {
 // con.on("open",()=>{
 //     console.log("database connected");
 // });
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 //defining mongoose schema
 var contactSchema = new mongoose.Schema({
     name: String,     //defining schema as present in form
@@ -39,6 +52,13 @@ var contactSchema = new mongoose.Schema({
 
 var Contact = mongoose.model('contact',contactSchema);//defining collection as form here the table which will be created will be named as contact(s).
 //we can acess this "Contact" for use this Contact to use columns
+<<<<<<< HEAD
+//EXPRESS STUFF
+app.use("/static",express.static('static'));
+app.use(express.urlencoded());
+
+
+=======
 
 
 
@@ -51,6 +71,7 @@ router.use(express.json());//this is used for using jsom format to save on datab
 router.use(express.urlencoded({extended:false}));//this is used to save data saved from form
 // app.use("/static",express.static('static'));this was first used by me but it does not including css file contact.css
 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 // view engine setup
 app.engine('html', cons.swig)
 app.set('views', path.join(__dirname, 'static'));
@@ -84,6 +105,18 @@ app.get('/Contact',(req,res)=>{
 //     res.status(200).render("contact",parms);
 // });
 
+<<<<<<< HEAD
+//collecting data into database mongodb
+app.post('/contact',(req ,res)=>{
+    var myData= new Contact(req.body);//all body elements like name address email from contact page are collected in contact collection of database and in mydata variable
+    myData.save().then(()=>{//we are able to write req.body due to body parser
+        res.send("this item is saved into the database")
+    }).catch(()=>{res.status(400).send("item was not send to database")
+});
+
+
+});
+=======
 
 
 
@@ -109,6 +142,7 @@ router.post('/contact',async(req,res)=>{
 })
 
 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 
 // res.status(200).render("contact");
 
