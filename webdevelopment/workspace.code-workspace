@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\projects"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "learning c language",
+		"liveServer.settings.CustomBrowser": "chrome"
+	}
+}
