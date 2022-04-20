@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after pseudoselctor</title>
+</head>
+<style>
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+        background-color: black;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+
+
+    }
+
+header::before {
+    content: "";
+        background: url('https://source.unsplash.com/user/erondu/1600x900') no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -13;
+        opacity: 0.33;
+    }
+
+    .navigation {
+        display: flex;
+        font-size: 23px;
+
+
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    li {
+        list-style: none;
+        padding: 34px 23px;
+    }
+
+    section {
+        margin: 3px 23px;
+        padding: 23px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        height: 344px;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">home</li>
+                <li class="item">about</li>
+                <li class="item">services</li>
+                <li class="item">contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h3>welcome to coading wold</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laudantium quas vitae alias excepturi harum unde
+            quo ullam ex beatae officiis et culpa mollitia? Voluptates, nobis atque doloribus commodi repudiandae
+            incidunt eius impedit laudantium.</p>
+
+
+    </section>
+    <hr>
+
+</body>
+
+</html>
