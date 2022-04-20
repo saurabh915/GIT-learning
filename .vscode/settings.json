@@ -8,5 +8,6 @@
         "quiz_pro.C": "cpp",
         "vector": "cpp"
     },
-    "explorer.sortOrder": "modified"
+    "explorer.sortOrder": "modified",
+    "json.maxItemsComputed": 65000
 }

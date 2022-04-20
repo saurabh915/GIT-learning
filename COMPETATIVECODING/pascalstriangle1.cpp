@@ -43,15 +43,6 @@ public:
     }
    
    }
-  //  vector <int> pascal2(pascal[numRows -1].size());
-   for(int i =0; i<pascal[numRows -1].size();i++){
-    // pascal2[i]=
-    cout<<pascal[numRows-1][i];
-   }
-  //   for (int i = 0; i < pascal2.size(); i++)
-  //  {
-  //   cout<<pascal2[i];
-  //  }
 // vector<vector<int>> generate;
 //    remove_copy(pascal.begin(),pascal.end(),generate.begin(),0);
 
@@ -76,12 +67,6 @@ int main()
     }
     cout<<endl;
    }
-  // vector<int>ans;
-  //  ans = s1.generate(5);
-  //  for (int i = 0; i < ans.size(); i++)
-  //  {
-  //   cout<<ans[i];
-  //  }
    
     return 0;
 }

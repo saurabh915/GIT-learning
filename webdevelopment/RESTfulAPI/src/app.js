@@ -5,7 +5,7 @@
 const express =  require("express");
 const { send } = require("express/lib/response");
 const res = require("express/lib/response");
-const studentrouter = require("./routers/student");
+const studentrouter = require("./routers/student");//connecting different folders
 const app =express();
 const port = process.env.PORT ||3000;//if you do not include any port number then it will automatically assign any port number
 
