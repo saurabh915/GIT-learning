@@ -1,7 +1,11 @@
 const http = require("http");
 
 const hostname = "127.0.0.1";
+<<<<<<< HEAD
 const port = 3000;
+=======
+const port = 80;
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -16,7 +20,11 @@ const server = http.createServer((req, res) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>website
       </title>
+<<<<<<< HEAD
       <link rel="stylesheet" href="CSS/style.css">
+=======
+      <link rel="stylesheet" href="../../projects/PROJECT-2/static/CSS/style.css">
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
       <link rel="stylesheet"  media="screen and (max-width:2000px)" href="CSS/phone.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+//int this constructor there are different data types in place of parameters but there are more number of constructoers 
+//so it important to choose which constructor 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 #include<iostream>
 using namespace std;
 class bankdeposite

@@ -3,6 +3,10 @@
     "files.associations": {
         "ostream": "cpp",
         "iostream": "cpp",
-        "AVL_TREE2.C": "cpp"
-    }
+        "AVL_TREE2.C": "cpp",
+        "TT.C": "cpp",
+        "quiz_pro.C": "cpp",
+        "vector": "cpp"
+    },
+    "explorer.sortOrder": "modified"
 }

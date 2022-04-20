@@ -10,7 +10,11 @@ class complex
      b = v2;
  }
  void printnumber(){
+<<<<<<< HEAD
      cout<<"YOur complex number is "<<endl<<a  <<" +"<<b<<"i";
+=======
+     cout<<"Your complex number is "<<endl<<a  <<" +"<<b<<"i";
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 
  }
  void printnumberbysum( complex o1, complex o2)
@@ -29,6 +33,10 @@ int main()
     c2.printnumber();
 
    
+<<<<<<< HEAD
     c3.printnumberbysum( c1, c2);
+=======
+    c3.printnumberbysum( c1, c2);//here is an object which takes arguments as objects;
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
     c3.printnumber();
 }

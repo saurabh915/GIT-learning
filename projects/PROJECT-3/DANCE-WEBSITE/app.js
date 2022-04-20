@@ -4,9 +4,24 @@ const fs = require("fs");
 const app = express();
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
+<<<<<<< HEAD
 mongoose.connect('mongodb://localhost/saurabhkart', {useNewUrlParser: true});
 const port = 8000;
 
+=======
+//mongoose.connect('mongodb://localhost/saurabhkart', {useNewUrlParser: true});
+const port = 8000;
+const url = "mongodb://127.0.0.1:27017/saurabhkart";
+mongoose.connect(url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+// mongoose.Promise = global.Promise;
+const con = mongoose.connection;
+con.on("open", () => {
+  console.log("Database connected");
+});
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 
 //DEFINING MONGOOSE SCHEMA
 var contactSchema = new mongoose.Schema({

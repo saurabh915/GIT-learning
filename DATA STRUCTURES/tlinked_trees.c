@@ -77,8 +77,8 @@ p4->right = p6;
 printf("preorder traverser: ");
 preordertraverse(p);
 printf("postorder traverser: ");
+postoreder(p);
 printf("inorder traverser:  ");
 inorder(p);
-postoreder(p);
     return 0;
 }

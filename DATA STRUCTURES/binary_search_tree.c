@@ -39,13 +39,13 @@ void postoreder(struct node *root)
 }
 void inorder(struct node *root)
 {
+    
     if (root != NULL)
     {
         inorder(root->left);
         printf("%d ",root->data);
         inorder(root->right);//first leftsubtree then root then right subtree; 
     }
-    
 }
 int isBST(struct node* root)
 {
@@ -72,39 +72,22 @@ int isBST(struct node* root)
       
 }
 //same as binary search no difference only difference is we have to return address of structure hence the function is pointer type
-struct node* search(struct node* root, int key){
-    if (root ==NULL)
-    {
-       printf("it is not a binary tree");
-      
-    }
-    else
-    {
-        if (root->data==key)
-        {
-           return root;
+struct node * searchIter(struct node* root, int key){
+    while(root!=NULL){
+        if(key == root->data){
+            return root;
         }
-        else
-        {
-            if (root->data < key)
-            {
-                return root->right;
-            }
-            else
-            {
-                return root->left;
-            }
-            
+        else if(key<root->data){
+            root = root->left;
         }
-        
-        
+        else{
+            root = root->right;
+        }
     }
-    
-    
-
-    
+    return NULL;
 }
-struct node* searchitr(struct node* root , int key)
+
+struct node* search(struct node* root , int key)
 {
     while (root !=NULL)
     {
@@ -114,13 +97,18 @@ struct node* searchitr(struct node* root , int key)
         }
         else
         {
-            if (root ->data>key)
+            if (root ->data->key)
             {
                 root = root->left;
             }
             else
             {
                 root=root->right;
+                return search(root->left,key) ;
+            }
+            else
+            {
+                return search(root->right, key);
             }
             
             
@@ -172,12 +160,15 @@ void insert(struct node* root, int key)
         
     }
     struct node* inorderpredecessor(struct node* root){
+        printf("inorderpredesoor is called with root %d\n",root->data);
         root = root->left;
+        printf("root to left is stored in root now root is %d\n",root->data);
         while (root->right!=NULL)
-        {
+        {printf("i am inside root ->right while loop and looping till i dont find root->right !=NULL\n");
            root=root->right;//here is the trick which says that if we do inorder traverser and we got all elements sorted and we have to find 
                              // the node which is just behind the any node(let say A) then that precceding node is right most node of  left subtree of   node (A).  
         }
+        printf("root is returned %d\n",root->data);
         return root;
     }
     
@@ -190,6 +181,9 @@ struct node *deletenode(struct node* root, int value)
     }
     if (root->left==NULL && root->right==NULL)
     {
+        printf("i  am at %d \n",root->data);
+        printf("and root->left and right is null");
+        printf("hence i am freed");
         free(root);
         return NULL;
     }
@@ -197,21 +191,31 @@ struct node *deletenode(struct node* root, int value)
     //search the node to be deleted
     if (value<root->data)
     {
+        printf("root is %d and value is %d",root->data,value);
+        printf("and as my value is less than root data i am calling delete node root to left data and storing it into root left\n");
          root->left = deletenode(root->left,value);
+         printf("i am returned from calling delete node root to left\n");
+         printf("and value of root to left is %d\n",root->left->data);
     }
     else if(value>root->data)
         {
-            root->right = deletenode(root->right,value);    
+              printf("root is %d and value is %d",root->data,value);
+        printf("and as my value is greater than root data i am calling root to right data and storing it into root right\n");
+            root->right = deletenode(root->right,value);  
+             printf("i am returned from calling delete node root to right\n");
+         printf("and value of root to left is %d\n",root->right->data);  
       }
       //deletion strategy the node is found
     else
-    {
+    {printf("i am(root)  equal to value hence calling inorderpredecessor and storing in ipre\n ");
         ipre = inorderpredecessor(root);
+        printf("i returned from calling inorderpredecessor and value of predcessor is %d\n",ipre->data);
         root->data = ipre->data;//here the core operation of deletion is takes place.
+        printf("ipre to data is stored in root to data\n");
        root->left = deletenode(root->left,ipre->data);
     }
     
-    
+    printf("returning root %d",root->data);
     return root;
 }
 
@@ -244,7 +248,7 @@ p1 -> right =p3; //assigning position to nodes of tree
 p4->left =p5;
 p4->right = p6;
 inorder(p);
-deletenode(p,3);
+deletenode(p,6);
 printf("\n");
 inorder(p);
 // printf("preorder traverser: ");
@@ -263,5 +267,25 @@ inorder(p);
 
 // insert(p  , 9);
 // printf("\n%d",p->right->right->right->data );
-    return 0;
+
+
+
+// struct node* n = searchitr(p, 10);
+//     if(n!=NULL){
+//     printf("Found: %d", n->data);
+//     }
+//     else{
+//         printf("Element not found");
+//     }
+
+
+
+
+
+// if(isBST(p)){
+//         printf("This is a bst" );
+//     }
+//     else{
+//         printf("This is not a bst");
+//     return 0;
 }

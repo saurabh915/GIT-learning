@@ -45,7 +45,7 @@ width: 100%;
 }
 #logo img{
     margin: 3px 6px;
-    height: 59px;
+    height: 85px;
     width: 85px;
 }
 /* navigation bar: list styling */
@@ -83,7 +83,11 @@ color: black;
    
 }
 #home::before{
+<<<<<<<< HEAD:projects/PROJECT-2/CSS/style.css
     background:url('C:/Users/om/my/PROJECT-2/home back.jpg' ) no-repeat center center/cover;
+========
+    background:url('../IMG/homeback.jpg' ) no-repeat center center/cover;
+>>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87:projects/PROJECT-2/static/CSS/style.css
         position: absolute;
         top: 0px;
         left: 0px;
@@ -146,7 +150,7 @@ display: block;}
     height: 492px;
     z-index: -1;
     opacity: 0.7;
-    background: url('../mobile.png')repeat center center/cover;
+    background: url('../IMG/mobile.png')repeat center center/cover;
 }
 #contact-box{
     display: flex;

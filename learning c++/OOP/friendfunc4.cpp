@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+//taking addresses of objects and creating a function which is not related to any class but can access members of class by friend function. 
+
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 #include<iostream>
 using namespace std;
 class c2;
@@ -32,7 +37,11 @@ class c2
     }
  
 };
+<<<<<<< HEAD
 void exchange(c1 &m,c2 &n)
+=======
+void exchange(c1 &m,c2 &n)//taking addresses of objects like a and b 
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
 {
     int tmp = m.val;
     m.val = n.val2;

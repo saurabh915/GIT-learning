@@ -20,7 +20,11 @@ int main()
 {
     B b;
     int* p;
+<<<<<<< HEAD
     p =&b.z;
+=======
+    p =&b.z;//p is pointing to object
+>>>>>>> 35861558bb864eca845b459385822cd4f5e58e87
     *p =1;
     p--;
     *p = 2;
