@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scopes, conditionals</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+            <li>item-5</li>
+            <li>item-6</li>
+            <li>item-7</li>
+        </ul>
+    </div>
+    <script>
+        var a = "this is string it can be changed";// var is a used for variable 
+                                                   // which is used in whole program                                               
+                                
+        let b= "i am new";
+        console.log(b);
+        b ="i am old";
+        console.log(b);
+        {
+            let a = "i am inside block";
+            console.log(a);// this a is defined inside the block
+        }
+        console.log(a);  // this a is defined outside block
+       const d ="try to change me";
+       console.log(d);
+       
+    </script>
+</body>
+</html>
